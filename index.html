@@ -1,0 +1,241 @@
+<!DOCTYPE HTML>
+<!--
+	Read Only by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Read Only by HTML5 UP</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+	</head>
+	<body class="is-preload">
+
+		<!-- Header -->
+			<section id="header">
+				<header>
+					<span class="image avatar"><img src="images/55191.png" alt="" /></span>
+					<h1 id="logo"><a href="#">Scheduling Algorithms</a></h1>
+					<p>Group 42</p><br />
+				</header>
+				<nav id="nav">
+					<ul>
+						<li><a class="icon solid fa-home" href="#one" class="active">Home</a></li>
+						<li><a class="icon solid fa-cog" href="#two">Process Scheduler</a></li>
+						<li><a class="icon solid fa-retweet" href="#three">Scheduling Algorithms</a></li>
+						<li><a class="icon solid fa-sitemap" href="#four">Team Members</a></li>
+					</ul>
+				</nav>
+				
+			</section>
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- One -->
+							<section id="one">
+								<div class="image main" data-position="center">
+									<img src="images/vector.jpg" alt="" />
+								</div>
+								<div class="container">
+									<header class="major">
+										<h2>Process Scheduling Algorithms</h2>
+										<p>CPU Scheduling</p>
+									</header>
+									<p>CPU Scheduling is a process of determining which process will own CPU for execution while another process is on hold. The main task of CPU scheduling is to make sure that whenever the CPU remains idle, the OS at least select one of the processes available in the ready queue for execution. The selection process will be carried out by the CPU scheduler. It selects one of the processes in memory that are ready for execution.</p>
+                                    
+                                    <p>Scroll down and have a look at how processes get scheduled if you use different algotithms and description and tutorials are attacted below to have a better understanding.</p>
+								</div>
+							</section>
+
+						<!-- Two -->
+							<section id="two">
+								<div class="container">
+									<h2>Process Scheduler</h2>
+											  <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+
+    
+        <h3>Algorithms : </h3>
+        <form id="algorithms">
+            <input type="radio" name="algo" id="fcfs" checked> <label for="fcfs">FCFS</label> <br>
+            <input type="radio" name="algo" id="sjf"> <label for="sjf">SJF</label> <br>
+            <input type="radio" name="algo" id="ljf"> <label for="ljf">LJF</label> <br>
+            <input type="radio" name="algo" id="rr"> <label for="rr">Round Robin</label> <br>
+            <input type="radio" name="algo" id="srjf"> <label for="srjf">SRTF</label> <br>
+            <input type="radio" name="algo" id="lrjf"> <label for="lrjf">LRTF</label> <br>
+            <input type="radio" name="algo" id="hrrn"> <label for="hrrn">HRRN</label> <br>
+        </form>
+        <br>
+        <table class="main-table">
+            <thead>
+                <tr>
+                    <th class="process-id">Process ID</th>
+                    <th class="priority hide">Priority</th>
+                    <th class="arrival-time">Arrival Time</th>
+                    <th class="process-time" colspan="1">Burst Time</th>
+                    <th class="process-btn"><button type="button" class="add-process-btn">+</button></th>
+                    <th class="process-btn"><button type="button" class="remove-process-btn">-</button></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="process-id" rowspan="2">P1</td>
+                    <td class="priority hide" rowspan="2"><input type="number" min="1" step="1" value="1"></td>
+                    <td class="arrival-time" rowspan="2"><input type="number" min="0" step="1" value="0"> </td>
+                    <td class="process-time cpu process-heading" colspan="">CPU</td>
+                    
+                </tr>
+                <tr>
+                    <td class="process-time cpu process-input"><input type="number" min="1" step="1" value="1"> </td>
+                </tr>
+            </tbody>
+        </table>
+        <div id="time-quantum" class="hide">
+            <br>
+            <label for="tq">Time Quantum : </label>
+            <input type="number" name="Time Quantum" id="tq" min="1" step="1" value="2">
+        </div>
+        <br>
+        <button type="button" class="add-btn">Add</button>
+        <button type="button" class="remove-btn">Delete</button>
+        <button type="button" class="calculate">Run</button>
+        <div id="output"></div>
+        <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+        <script src="script.js"></script>
+
+			</div>
+
+				
+
+						<!-- Three -->
+							<section id="three">
+								<div class="container">
+									<h3>Scheduling Algorithms</h3>
+									<p>In computing, scheduling is the method by which work is assigned to resources that complete the work. The work may be virtual computation elements such as threads, processes or data flows, which are in turn scheduled onto hardware resources such as processors, network links or expansion cards.
+
+A scheduler is what carries out the scheduling activity. Schedulers are often implemented so they keep all computer resources busy (as in load balancing), allow multiple users to share system resources effectively, or to achieve a target quality of service. Scheduling is fundamental to computation itself, and an intrinsic part of the execution model of a computer system; the concept of scheduling makes it possible to have computer multitasking with a single central processing unit (CPU). Given below are the description about 8 implemented algorithms</p>
+									<div class="features">
+										
+                                        <article>
+                                            
+											<div class="box">
+												<h4>First Come First Serve (FCFS)</h4>
+												<p>First Come First Serve is an operating system scheduling algorithm that automatically executes queued requests and processes in order of their arrival.
+It is the easiest and simplest CPU scheduling algorithm. In this type of algorithm, processes which requests the CPU first get the CPU allocation first. 
+This is managed with a FIFO queue.</p>
+											</div>
+                                                                     
+										</article>
+										<article>
+
+											<div class="box">
+												<h4>Shortest Job First (SJF)</h4>
+												<p>Shortest Job First is a scheduling policy that selects the waiting process with the smallest execution time to execute next. It is a non-preemptive and Greedy algorithm.
+Shortest Job first has the advantage of having a minimum average waiting time among all scheduling algorithms.
+It may cause starvation if shorter processes keep coming.</p>
+											</div>
+										</article>
+										<article>
+											
+											<div class="box">
+												<h4>Shortest Remaining Time First (SRTF)</h4>
+												<p>This Algorithm is the preemptive version of SJF scheduling. In SRTF, the execution of the process can be stopped after certain amount of time. 
+At the arrival of every process, the short term scheduler schedules the process with the least remaining burst time among the list of available processes and the running process.</p>
+											</div>
+										</article>
+                                        
+                                        <article>
+											
+											<div class="box">
+												<h4>Priority Scheduling</h4>
+												<p>Priority Scheduling is a method of scheduling processes that is based on priority.
+Hence, the scheduler selects the tasks to work as per the priority.
+The processes with higher priority should be carried out first, whereas jobs with equal priorities are carried out on a round-robin or FCFS basis.
+Priority depends upon memory requirements, time requirements, etc.</p>
+											</div>
+										</article>
+                                        
+                                        <article>
+											
+											<div class="box">
+												<h4>Highest Response Ratio Next (HRRN)</h4>
+												<p>Prerequisite – CPU Scheduling
+Given n processes with their Arrival times and Burst times, the task is to find average waiting time and average turn around time using HRRN scheduling algorithm.
+The name itself states that we need to find the response ratio of all available processes and select the one with the highest Response Ratio. 
+A process once selected will run till completion.</p>
+											</div>
+										</article>
+                                        
+                                         <article>
+											
+											<div class="box">
+												<h4>Longest Job First (LJF)</h4>
+												<p>Longest Job First is a non-preemptive scheduling algorithm. 
+This algorithm is based upon the burst time of the processes. 
+The processes are put into the ready queue based on their burst times i.e., in a descending order of the burst times. 
+As the name suggests this algorithm is based upon the fact that the process with the largest burst time is processed first.
+The burst time of only those processes is considered that have arrived in the system until that time.</p>
+											</div>
+										</article>
+                                        
+                                         <article>
+											
+											<div class="box">
+												<h4>Longest Remaining Time First (LRTF)</h4>
+												<p>Prerequisite – Process Management & CPU Scheduling
+This is a pre-emptive version of Longest Job First (LJF) scheduling algorithm. In this scheduling algorithm, we find the process with the maximum remaining time and then process it. 
+We check for the maximum remaining time after some interval of time(say 1 unit each) to check if another process having more Burst Time arrived up to that time.</p>
+											</div>
+										</article>
+                                        
+                                        <article>
+											
+											<div class="box">
+												<h4>Round Robin Scheduling</h4>
+												<p>Round Robin is the preemptive process scheduling algorithm.
+Each process is provided a fix time to execute, it is called a quantum.
+Once a process is executed for a given time period, it is preempted and other process executes for a given time period.
+Context switching is used to save states of preempted processes.</p>
+											</div>
+										</article>
+									</div>
+								</div>
+							</section>
+
+						<!-- Four -->
+							<section id="four">
+								<div class="container">
+									<h3>Developed by</h3>
+                                    
+                                    <p>Rushabh Thakkar</p>
+                                    <p>Shubh Patel</p>
+								</div>
+							</section> 
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
+
+
+
+										
